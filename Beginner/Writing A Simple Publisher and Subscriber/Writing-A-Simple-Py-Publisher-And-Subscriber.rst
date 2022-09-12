@@ -181,7 +181,7 @@ Navigate one level back to the ``ros2_ws/src/py_pubsub`` directory, where the ``
 
 Open ``package.xml`` with your text editor.
 
-As mentioned in the :doc:`previous tutorial <./Creating-Your-First-ROS2-Package>`, make sure to fill in the ``<description>``, ``<maintainer>`` and ``<license>`` tags:
+As mentioned in the previous tutorial, make sure to fill in the <description>, <maintainer> and <license> tags:
 
 .. code-block:: xml
 
@@ -301,7 +301,7 @@ Open the ``subscriber_member_function.py`` with your text editor.
 
 The subscriber node’s code is nearly identical to the publisher’s.
 The constructor creates a subscriber with the same arguments as the publisher.
-Recall from the :doc:`topics tutorial <../Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics>` that the topic name and message type used by the publisher and subscriber must match to allow them to communicate.
+Recall from the topics tutorial that the topic name and message type used by the publisher and subscriber must match to allow them to communicate.
 
 .. code-block:: python
 
