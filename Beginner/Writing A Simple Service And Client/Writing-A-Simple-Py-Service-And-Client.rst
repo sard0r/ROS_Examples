@@ -1,17 +1,8 @@
-.. redirect-from::
-
-    Tutorials/Writing-A-Simple-Py-Service-And-Client
-
-.. _PySrvCli:
 
 Writing a simple service and client (Python)
 ============================================
 
 **Goal:** Create and run service and client nodes using Python.
-
-**Tutorial level:** Beginner
-
-**Time:** 20 minutes
 
 .. contents:: Contents
    :depth: 2
@@ -20,15 +11,14 @@ Writing a simple service and client (Python)
 Background
 ----------
 
-When :doc:`nodes <../Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes>` communicate using :doc:`services <../Beginner-CLI-Tools/Understanding-ROS2-Services/Understanding-ROS2-Services>`, the node that sends a request for data is called the client node, and the one that responds to the request is the service node.
-The structure of the request and response is determined by a ``.srv`` file.
+When nodes communicate using services, the node that sends a request for data is called the client node, and the one that responds to the request is the service node. The structure of the request and response is determined by a .srv file.
 
 The example used here is a simple integer addition system; one node requests the sum of two integers, and the other responds with the result.
 
 Prerequisites
 -------------
 
-In previous tutorials, you learned how to :doc:`create a workspace <./Creating-A-Workspace/Creating-A-Workspace>` and :doc:`create a package <./Creating-Your-First-ROS2-Package>`.
+In previous tutorials, you learned how to create a workspace and create a package.
 
 Tasks
 -----
@@ -257,21 +247,7 @@ The ``entry_points`` field of your ``setup.py`` file should look like this:
 
 It's good practice to run ``rosdep`` in the root of your workspace (``ros2_ws``) to check for missing dependencies before building:
 
-.. tabs::
-
-   .. group-tab:: Linux
-
-      .. code-block:: console
-
             rosdep install -i --from-path src --rosdistro {DISTRO} -y
-
-   .. group-tab:: macOS
-
-      rosdep only runs on Linux, so you can skip ahead to next step.
-
-   .. group-tab:: Windows
-
-      rosdep only runs on Linux, so you can skip ahead to next step.
 
 
 Navigate back to the root of your workspace, ``ros2_ws``, and build your new package:
@@ -282,25 +258,7 @@ Navigate back to the root of your workspace, ``ros2_ws``, and build your new pac
 
 Open a new terminal, navigate to ``ros2_ws``, and source the setup files:
 
-.. tabs::
-
-  .. group-tab:: Linux
-
-    .. code-block:: console
-
       . install/setup.bash
-
-  .. group-tab:: macOS
-
-    .. code-block:: console
-
-      . install/setup.bash
-
-  .. group-tab:: Windows
-
-    .. code-block:: console
-
-      call install/setup.bat
 
 Now run the service node:
 
@@ -339,18 +297,3 @@ Summary
 
 You created two nodes to request and respond to data over a service.
 You added their dependencies and executables to the package configuration files so that you could build and run them, allowing you to see a service/client system at work.
-
-Next steps
-----------
-
-In the last few tutorials you've been utilizing interfaces to pass data across topics and services.
-Next, you'll learn how to :doc:`create custom interfaces <./Custom-ROS2-Interfaces>`.
-
-Related content
----------------
-
-* There are several ways you could write a service and client in Python; check out the ``minimal_client`` and ``minimal_service`` packages in the `ros2/examples <https://github.com/ros2/examples/tree/{REPOS_FILE_BRANCH}/rclpy/services>`_ repo.
-
-* In this tutorial, you used the ``call_async()`` API in your client node to call the service.
-  There is another service call API available for Python called synchronous calls.
-  We do not recommend using synchronous calls, but if you'd like to learn more about them, read the guide to :doc:`Synchronous vs. asynchronous clients <../../How-To-Guides/Sync-Vs-Async>`.
