@@ -18,7 +18,7 @@ The example used here is a simple integer addition system; one node requests the
 Prerequisites
 -------------
 
-In previous tutorials, you learned how to create a workspace and create a package.
+In previous Lab Sessions, you learned how to create a workspace and create a package.
 
 Tasks
 -----
@@ -27,7 +27,7 @@ Tasks
 ^^^^^^^^^^^^^^^^^^
 
 Open a new terminal and source your ROS 2 installation so that ros2 commands will work.
-Navigate into the ros2_ws directory created in a previous tutorial.
+Navigate into the ros2_ws directory created in a previous Lab Session.
 
 
 Recall that packages should be created in the ``src`` directory, not the root of the workspace.
