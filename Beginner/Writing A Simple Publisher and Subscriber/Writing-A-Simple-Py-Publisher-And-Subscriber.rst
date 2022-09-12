@@ -26,9 +26,9 @@ Tasks
 1 Create a package
 ^^^^^^^^^^^^^^^^^^
 
-Open a new terminal and :doc:`source your ROS 2 installation so that ``ros2`` commands will work.
+Open a new terminal and source your ROS 2 installation so that ros2 commands will work.
 
-Navigate into the ``ros2_ws`` directory created in a :ref:`previous tutorial <new-directory>`.
+Navigate into the ros2_ws directory created in a previous tutorial.
 
 Recall that packages should be created in the ``src`` directory, not the root of the workspace.
 So, navigate into ``ros2_ws/src``, and run the package creation command:
