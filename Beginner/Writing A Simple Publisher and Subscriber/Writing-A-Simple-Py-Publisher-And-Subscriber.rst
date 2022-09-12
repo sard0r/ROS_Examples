@@ -13,12 +13,10 @@ Background
 
 In this Lab Session, you will create nodes that pass information in the form of string messages to each other over a topic. The example used here is a simple “talker” and “listener” system; one node publishes data and the other subscribes to the topic so it can receive that data.
 
-The code used in these examples can be found `here <https://github.com/ros2/examples/tree/{REPOS_FILE_BRANCH}/rclpy/topics>`__.
+The code used in these examples can be found in src of this github.
 
 Prerequisites
 -------------
-
-In previous tutorials, you learned how to :doc:`create a workspace <./Creating-A-Workspace/Creating-A-Workspace>` and :doc:`create a package <./Creating-Your-First-ROS2-Package>`.
 
 A basic understanding of Python is recommended, but not entirely necessary.
 
